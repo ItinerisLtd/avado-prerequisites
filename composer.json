@@ -1,0 +1,58 @@
+{
+    "name": "itinerisltd/avado-prerequisites",
+    "type": "wordpress-plugin",
+    "description": "Verify education and languages prerequisites for Avado before WooCommerce checkout.",
+    "homepage": "https://github.com/ItinerisLtd/avado-prerequisites",
+    "license": "GPL-2.0-or-later",
+     "authors": [
+        {
+            "name": "Itineris Limited",
+            "email": "hello@itineris.co.uk",
+            "homepage": "https://itineris.co.uk/",
+            "role": "Company"
+        },
+        {
+            "name": "Tang Rufus",
+            "email": "tangrufus@gmail.com",
+            "homepage": "https://typist.tech/",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.2",
+        "ext-curl": "*"
+    },
+    "require-dev": {
+        "automattic/vipwpcs": "^0.3.0",
+        "roave/security-advisories": "dev-master",
+        "wp-coding-standards/wpcs": "^1.1"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.9.x-dev"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Itineris\\AvadoPrerequisites\\": "src/"
+        }
+    },
+    "scripts": {
+        "check-style": "phpcs --colors -p",
+        "pretag": [
+            "composer update --no-suggest",
+            "@check-style",
+            "composer normalize",
+            "doctoc README.md",
+            "github_changelog_generator --no-verbose"
+        ]
+    },
+    "support": {
+        "email": "hello@itineris.co.uk",
+        "issues": "https://github.com/ItinerisLtd/avado-prerequisites/issues",
+        "source": "https://github.com/ItinerisLtd/avado-prerequisites"
+    }
+}
