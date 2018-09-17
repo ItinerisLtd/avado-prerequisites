@@ -4,7 +4,7 @@
     "description": "Verify education and languages prerequisites for Avado before WooCommerce checkout.",
     "homepage": "https://github.com/ItinerisLtd/avado-prerequisites",
     "license": "GPL-2.0-or-later",
-     "authors": [
+    "authors": [
         {
             "name": "Itineris Limited",
             "email": "hello@itineris.co.uk",
@@ -20,7 +20,8 @@
     ],
     "require": {
         "php": "^7.2",
-        "ext-curl": "*"
+        "ext-curl": "*",
+        "composer/installers": "^1.5"
     },
     "require-dev": {
         "automattic/vipwpcs": "^0.3.0",
@@ -32,7 +33,7 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "0.9.x-dev"
+            "dev-master": "0.1.x-dev"
         }
     },
     "autoload": {

@@ -55,4 +55,14 @@
         <exclude name="WordPress.WhiteSpace.ControlStructureSpacing.NoSpaceBeforeCloseParenthesis"/>
         <exclude name="WordPress.WhiteSpace.OperatorSpacing.NoSpaceBefore"/>
     </rule>
+
+    <rule ref="WordPress.WhiteSpace.ControlStructureSpacing">
+        <!--This is because this rule gives internal error Undefined index: parenthesis_owner-->
+        <exclude-pattern>/src/PrerequisiteCollection.php</exclude-pattern>
+    </rule>
+
+    <rule ref="Squiz.Commenting.FunctionComment.MissingParamComment">
+        <!--Because TangRufus is lazy-->
+        <exclude-pattern>/src/*.php</exclude-pattern>
+    </rule>
 </ruleset>
