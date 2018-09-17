@@ -16,6 +16,7 @@ Verify education and languages prerequisites for Avado before WooCommerce checko
 
 - [Minimum Requirements](#minimum-requirements)
 - [Installation](#installation)
+- [To Webkul](#to-webkul)
 - [Feedback](#feedback)
 - [Change log](#change-log)
 - [Credits](#credits)
@@ -44,8 +45,18 @@ Verify education and languages prerequisites for Avado before WooCommerce checko
 ```
 
 ```bash
-$ composer require itinerisltd/avado-prerequisites
+$ composer require itinerisltd/avado-prerequisites:dev-master
 ```
+
+## To Webkul
+
+- activate WooCommerce first
+- using composer autoload is a must
+- check [itinerisltd/avado-prerequisites-demo](https://github.com/itinerisltd/avado-prerequisites-demo)
+- submit pull requests if you see fit
+
+You need to tap into [`avado_prerequisites_from_wc_checkout` and `avado_prerequisites_from_wc_order`](./src/PrerequisiteCollectionFactory.php). Add your [`PrerequisiteInterface`](./src/PrerequisiteInterface.php) instances.
+[itinerisltd/avado-prerequisites-demo](https://github.com/itinerisltd/avado-prerequisites-demo) is what you need to implement.
 
 ## Feedback
 

@@ -31,11 +31,9 @@ if (file_exists(__DIR__ . '/vendor/autoload.php')) {
  */
 function run(): void
 {
-    $prerequisites = new Prerequisites();
-
-    add_action('woocommerce_before_order_notes', [$prerequisites, 'render']);
-    add_action('woocommerce_checkout_update_order_meta', [$prerequisites, 'save']);
-    add_action('woocommerce_checkout_order_processed', [$prerequisites, 'intercept']);
+    add_action('woocommerce_before_order_notes', [Plugin::class, 'render']);
+    add_action('woocommerce_checkout_update_order_meta', [Plugin::class, 'save']);
+    add_action('woocommerce_checkout_order_processed', [Plugin::class, 'intercept']);
 }
 
 run();
